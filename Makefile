@@ -1,6 +1,16 @@
 
-HTML = doc/index.html
+DOC = README.md
+DOC += doc/index.html
 
-all: doc
+SRC = bI/bI.py
 
-doc: $(HTML)
+bI += src/Project.bI
+bI += src/Deploy.bI 
+
+TMP = tmp/bI.log
+
+all: $(DOC)
+
+$(DOC): $(TMP) Makefile
+$(TMP): $(SRC) $(bI) Makefile
+	python bI/bI.py $(bI)
