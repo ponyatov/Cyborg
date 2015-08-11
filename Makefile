@@ -12,6 +12,7 @@ bI += src/Project.bI
 bI += src/Deploy.bI
 TEX += bI/doc/bI.tex
 TEX += bI/doc/comments.tex
+TEX += bI/doc/int.tex bI/doc/float.tex bI/doc/string.tex
 
 TMP = tmp/bI.log
 
