@@ -1,0 +1,132 @@
+\secrel{Язык \bi}\secdown
+
+\secly{Принципы языка}
+
+\begin{itemize}
+
+\item динамический
+
+\item объектный
+
+\item параллельный
+\\ при разработке языка большое внимание уделяется обеспечению параллелизма в 
+самом широком смысле: микропотоки, использование потоков runtime-системы и/или
+ОС, управление выполнением программ на гетерогенных вычислительных кластерах, 
+облачных севисах и p2p распределенных сетях, средства платформенно-независимой
+сериализаци, поддержка персистентности и резервирования, синтаксическая 
+поддержка языком параллельного программирования. 
+
+\item run-time спецификация типов и оптимизация
+
+\item компилируемый через трансляцию
+\\ результирующая система может быть оттранслирована\note{ограниченно}\ в 
+исходный код на \cpp\ для обеспечения переносимости программ для систем, для
+которыйх не реализована \bi-машина.
+
+\item литературное программирование\note{literate programming}\ и 
+автоматическая генерация документации  
+
+\end{itemize}
+
+\secly{Комментарии}
+
+\secrel{Система типов}\secdown
+
+\secrel{Примитивные}\secdown
+\secrel{int: целые}
+\secrel{float: дробные}
+\secrel{string: строки}
+\secrel{ptr: указатели}
+\secrel{bit: битовые строки}
+
+Были введены для работы с низкоуровневыми машинными целыми и упакованными
+двоичными данными, в т.ч. использования в качестве бинарных масок. 
+
+\secup
+
+\secrel{Составные типы и контейнеры}\secdown
+\secrel{rec: записи}
+\secrel{pair: пары}
+\secrel{list: списки}
+\secrel{dict: хэш-массивы}
+\secrel{graph: деревья и графы}
+\secrel{queue: очередь}
+\secrel{stack: FIFO}
+
+\secup
+
+\secrel{Математические}\secdown
+
+\secrel{complex}
+\secrel{vector}
+\secrel{matrix}
+
+\secup
+
+\secrel{Файловые и сетевые типы}\secdown
+
+\secrel{bin: двоичный файл}
+\secrel{txt: plain text текстовый файл}
+\secrel{file: генерализованные файлы}
+
+Универсальный файл с набором кодеков, лексическим/синтаксическим анализатором, 
+динамической структурой, обработчиками событий,.. 
+ 
+\secrel{socket: платформенные сокеты}
+
+\secrel{codec: потоковый конвертер форматов данных}
+
+\secup
+
+\secrel{Типы обеспечения параллелизма}\secdown
+
+\secrel{thread: нить}
+\secrel{mutex}
+\secrel{semaphore}
+\secrel{node: вычислительный узел (ядро процессора)}
+\secrel{group: группа узлов}
+\secrel{msg: сообщение}
+\secrel{prio: приоритет}
+\secrel{pipe: межпроцессное соединение}
+\secrel{share: шара (общая структура данных)}
+\secrel{task: задача}
+\secrel{sched: планировщик}
+
+\secup
+
+\secrel{Пользовательский интерфейс}\secdown
+
+\secrel{console}
+\secrel{window}
+\secrel{menu}
+\secrel{text}
+\secrel{widget}
+
+\secup
+
+\secrel{Геометрические и САПР типы}\secdown
+
+\secrel{layer}
+\secrel{point}
+\secrel{line: линия}
+\secrel{arc: дуга}
+\secrel{nurbs: кривая Безье}
+\secrel{color: цвет}
+\secrel{facet: полигон}
+\secrel{body: тело}
+\secrel{dim: геометрический размер}
+\secrel{mat: материал}
+\secrel{camera}
+\secrel{tool: инструмент}
+\secrel{machine: станок}
+\secrel{detail}
+\secrel{assembly}
+\secrel{technology}
+\secrel{sheet}
+\secrel{view}
+
+\secup
+
+\secup
+
+\secup

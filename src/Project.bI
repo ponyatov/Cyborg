@@ -11,7 +11,7 @@ Author = {
 }
 
 About = "
-This is prototype of user-extandable organizer system:
+This is prototype of user-extandable clowd organizer system:
 - task tracking 
 - time management
 - personal finance assistant

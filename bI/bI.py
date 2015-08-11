@@ -14,8 +14,8 @@ class bIsource:
         print >> log, self.__class__, FileName
         self.FileName = FileName
         self.src = open(FileName, 'r')
-        self.out = self.touchopen('tmp/' + FileName + '.out')
-        print self.out
+        self.log = self.touchopen('tmp/' + re.sub(r'\.bI$',r'.log',FileName))
+        print self.log
     def touchopen(self, FileName):
         '''
         create file with autocreate dir tree
