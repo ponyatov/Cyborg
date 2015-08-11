@@ -2,8 +2,8 @@
 DOC = README.md
 DOC += doc/index.html
 
-PDF = doc/Cyborg.pdf
-TEX = doc/doc.tex
+PDF = doc/ru/Cyborg.pdf
+TEX = doc/ru/doc.tex
 
 SRC = bI/bI.py
 
@@ -16,7 +16,7 @@ all: $(DOC) $(PDF)
 
 $(PDF): $(TEX)
 	mkdir -p tmp/tex
-	pdflatex -output-directory tmp/tex $<
+	pdflatex -halt-on-error -output-directory tmp/tex $<
 
 $(DOC): $(TMP) Makefile
 $(TMP): $(SRC) $(bI) Makefile
