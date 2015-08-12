@@ -7,13 +7,13 @@ TEX = doc/ru/doc.tex doc/header.tex doc/ru/header.tex
 TEX += doc/ru/about.tex
 
 SRC = bI/bI.py
+SRC += bI/biObject.py bI/biInt.py bI/biSource.py bI/biComment.py
 
 bI += src/Project.bI
 bI += src/Deploy.bI
 TEX += bI/doc/bI.tex
 TEX += bI/doc/comments.tex
 TEX += bI/doc/int.tex bI/doc/float.tex bI/doc/string.tex
-TEX += bI/biObject.py bI/biInt.py 
 
 TMP = tmp/bI.log
 
