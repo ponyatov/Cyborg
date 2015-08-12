@@ -1,36 +1,13 @@
-# bI language interpreter in Python 2.8
-
+# bI language interpreter in Python2
+ 
 import os, sys, time, re
-
+ 
 print time.localtime()[:6], sys.argv
 
-log = sys.stdout # open('tmp/bI.log', 'w')
+from biSource import *
 
-class bIsource:
-    '''
-    source file in bI language
-    '''
-    def __init__(self, FileName):
-        print >> log, self.__class__, FileName
-        self.FileName = FileName
-        self.src = open(FileName, 'r')
-        self.log = self.touchopen('tmp/' + re.sub(r'\.bI$',r'.log',FileName))
-        print self.log
-    def touchopen(self, FileName):
-        '''
-        create file with autocreate dir tree
-        if filename has /-slashed dir tree component
-        '''
-        T = FileName.split('/')
-        if len(T) > 1:
-            D = ''
-            for i in T[:-1]:
-                D += '%s/' % i
-                try:
-                    os.mkdir(D[:-1])
-                except:
-                    pass
-        return open(FileName,'w')
-
-for SrcFileName in sys.argv[1:]:
-    bIsource(SrcFileName)
+if len(sys.argv)==1:
+    sys.argv+=['../src/Project.bI','../src/Deploy.bI']
+for i in sys.argv[1:]:
+    S = biSource(i)
+    print S, S.py(), S.parse()
